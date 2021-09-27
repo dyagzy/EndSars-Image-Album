@@ -1,0 +1,78 @@
+﻿@model ImageGallery.Models.UploadImageModel
+
+<div class="container body-content" >
+    <div class="row upload-container">
+        <div class="upload-form drop-shadow">
+
+            <form asp-action="UploadNewImage" method="post" enctype="multipart/form-data" id="upload-form">
+                <table border="0" cellpadding="2" cellspacing="2">
+                    <tr>
+                        <td>Title</td>
+                        <td>
+                            <input asp-for="Title" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Tags</td>
+                        <td>
+                            <input asp-for="Tags" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Image</td>
+                        <td>
+                            <input asp-for="UploadImage" />
+                            <input type="submit" class="btn btn-primary" />
+                        </td>
+                    </tr>
+
+                </table>
+
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            @*<form asp-action="UploadNewImage" method="post" enctype="multipart/form-data" id="upload-form">
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Tags"></label>
+                <input asp-for="Tags" class="form-control" />
+            </div>
+            <div>
+                <label class="btn btn-default btn-file">
+                    Browse For Image
+                    <input type="file" name="file" style="display: none" />
+                </label>
+
+            </div>
+            <div class="submit">
+                <button type="submit" id="btn-upload" class="btn btn-info">Submit</button>
+            </div>
+
+        </form>*@
+
+        </div>
+
+    </div>
+
+</div>
