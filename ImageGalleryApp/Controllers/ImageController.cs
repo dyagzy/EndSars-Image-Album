@@ -1,5 +1,6 @@
 ﻿using ImageGallery.Infrastructures;
 using ImageGallery.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace ImageGallery.Controllers
             _imageUpload = imageUpload;
         }
 
+        [Authorize]
         public IActionResult Upload()
         {
             var model = new UploadImageModel();
